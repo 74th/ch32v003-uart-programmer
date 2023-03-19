@@ -13,7 +13,7 @@ https://github.com/openwch/ch32v003/blob/main/CH32V003_IAP_Use_Introduction.pdf
 After flashing the bootloader, specify the UART port and execute the following to write the firmware.
 
 ```
-ch32v003-uart-programmer --baud 460800 --device /dev/ttyUSB0 firmware.bin
+ch32v0-uprog --baud 460800 --device /dev/ttyUSB0 firmware.bin
 ```
 
 ## install
