@@ -12,6 +12,8 @@ https://github.com/openwch/ch32v003/blob/main/CH32V003_IAP_Use_Introduction.pdf
 
 When this bootloader is powered up with PC0 high (it may not function satisfactorily with NRST), it is in a state waiting to be written on the UART.
 
+Execute the following commands to flash via UART. Then reset PC0 to GND or floating and it will boot with firmware.
+
 ```
 ch32v0-uprog --baud 460800 --device /dev/ttyUSB0 firmware.bin
 ```
