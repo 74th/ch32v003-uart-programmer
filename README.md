@@ -18,7 +18,9 @@ Execute the following commands to flash via UART. Then reset PC0 to GND or float
 ch32v0-uprog --baud 460800 --device /dev/ttyUSB0 firmware.bin
 ```
 
-## install
+## download and install
+
+https://github.com/74th/ch32v003-uart-programmer/releases
 
 ```
 go install github.com/74th/ch32v003-uart-programmer/cmd/ch32v0-uprog@latest
