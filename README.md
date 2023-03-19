@@ -19,5 +19,5 @@ ch32v003-uart-programmer --baud 460800 --device /dev/ttyUSB0 firmware.bin
 ## install
 
 ```
-go install github.com/74th/ch32v003-uart-programmer
+go install github.com/74th/ch32v003-uart-programmer@latest
 ```
