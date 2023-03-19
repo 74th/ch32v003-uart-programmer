@@ -6,6 +6,8 @@ import (
 	"fmt"
 	"io"
 	"os"
+	"runtime"
+	"strings"
 	"time"
 
 	"github.com/dustin/go-humanize"
@@ -194,6 +196,10 @@ func (f *flasher) sendEnd(ctx context.Context) error {
 }
 
 func OpenUART(ctx context.Context, device string, baud int) (serial.Port, error) {
+	if runtime.GOOS == "windows" && strings.HasPrefix(device, "COM") {
+		device = "\\\\.\\" + device
+	}
+
 	config := serial.Config{
 		Address:  device,
 		BaudRate: baud,
