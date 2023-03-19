@@ -13,8 +13,8 @@ func main() {
 
 	var opts struct {
 		Version bool   `short:"v" long:"version" description:"show version"`
-		Device  string `short:"d" long:"device" description:"device such as /dev/ttyUSB0, COM10"`
-		Baud    int    `short:"b" long:"baud" description:"baud rate such as 115200, 460800"`
+		Device  string `short:"d" long:"device" required:"yes" description:"device such as /dev/ttyUSB0, COM10"`
+		Baud    int    `short:"b" long:"baud" default:"115200" description:"baud rate such as 115200, 460800"`
 		Args    struct {
 			Path string `description:"firmware path firmware.bin"`
 		} `positional-args:"yes" required:"yes"`
